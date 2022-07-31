@@ -1,43 +1,91 @@
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+
 .hidden {
   display: none;
 }
 
 #quote {
   display: flex;
-  flex-direction: column;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: 5%;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
+@keyframes clockFadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .clock_style {
+  align-items: center;
   display: flex;
   justify-content: center;
   position: absolute;
-  left: 0;
-  right: 0;
+  top: 30%;
+  width: 100%;
   color: white;
-  font-weight: 900;
-  font-size: 200px;
+  font-weight: 500;
+  font-size: 150px;
+  animation: clockFadein 0.8s linear;
+}
+@keyframes greetingFadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #greeting {
   display: flex;
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 220px;
+  width: 100%;
+  top: 50%;
   justify-content: center;
+  align-items: center;
   color: white;
-  font-size: 50px;
+  font-size: 45px;
+  font-weight: 100;
+  animation: greetingFadein 0.8s linear;
 }
 
 #quote {
   color: white;
   font-weight: 400;
+  animation: quoteFadein 0.8s linear;
+}
+@keyframes quoteFadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes loginFadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .login_style {
@@ -45,10 +93,9 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 250px;
+  top: 50%;
+  width: 100%;
+  animation: loginFadein 3s linear;
 }
 
 #login-form input {
@@ -56,10 +103,20 @@
   border-bottom: 2px solid white;
   background: transparent;
   color: white;
+  width: 500px;
+  height: 50px;
+  font-size: 50px;
+  text-align: center;
 }
 
 #login-form input::placeholder {
   color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+#login-form input:focus {
+  outline: none;
 }
 
 #login-form button {
@@ -68,4 +125,5 @@
   background: transparent;
   color: white;
   cursor: pointer;
+  font-size: 30px;
 }
