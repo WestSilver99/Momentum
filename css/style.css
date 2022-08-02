@@ -20,6 +20,9 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
+  color: white;
+  font-weight: 400;
+  animation: quoteFadein 0.8s linear;
 }
 @keyframes clockFadein {
   from {
@@ -64,10 +67,42 @@ img {
   animation: greetingFadein 0.8s linear;
 }
 
-#quote {
+#todo-form {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 60%;
+}
+
+#todo-form input {
+  border: none;
+  border-bottom: 2px solid white;
+  width: 500px;
+  height: 50px;
+  background-color: transparent;
+  font-size: 30px;
   color: white;
-  font-weight: 400;
-  animation: quoteFadein 0.8s linear;
+}
+
+#todo-form input::placeholder {
+  color: white;
+  text-align: center;
+}
+
+#todo-form input:focus {
+  outline: none;
+}
+
+#todo-list {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 70%;
+  size: 40px;
+  color: white;
 }
 @keyframes quoteFadein {
   from {
