@@ -1,5 +1,9 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
 img {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   left: 0px;
@@ -15,7 +19,7 @@ img {
 
 #quote {
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 5%;
   justify-content: center;
   align-items: center;
@@ -37,7 +41,7 @@ img {
   align-items: center;
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 30%;
   width: 100%;
   color: white;
@@ -56,20 +60,20 @@ img {
 
 #greeting {
   display: flex;
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 50%;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 45px;
-  font-weight: 300;
+  font-weight: 600;
   animation: greetingFadein 0.8s linear;
 }
 
 #todo-form {
   display: flex;
-  position: absolute;
+  position: fixed;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -96,14 +100,23 @@ img {
 }
 
 #todo-list {
-  display: block;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   top: 70%;
-  size: 40px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 25%;
   color: white;
+  font-size: 20px;
 }
+
+#todo-list button {
+  margin-left: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 @keyframes quoteFadein {
   from {
     opacity: 0;
@@ -127,7 +140,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 50%;
   width: 100%;
   animation: loginFadein 3s linear;

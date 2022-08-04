@@ -1,9 +1,10 @@
 const images = [
-  "nick_wilde_judy_hopps_zootopia-wide.jpg",
   "pexels-jakub-novacek-924824.jpg",
   "pexels-piccinng-3075993.jpg",
   "upsidedown.jpg",
   "swing.jpg",
+  "1210774.jpeg",
+  "thumb-1920-1185634.jpg",
 ];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
